@@ -1,0 +1,44 @@
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+.menu-button > .arrow-button, .menu-button > .arrow-button > .arrow { -fx-padding: 0; }
+
+.menu{
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color : #292D33;
+    -fx-border-color:  #17181a;
+    -fx-font-size: 11;
+    -fx-text-fill: white;
+}
+
+.context-menu {
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color : #292D33;
+    -fx-border-color:  #17181a;
+    -fx-font-size: 11;
+    -fx-text-fill: white;
+}
+
+.menu-item{
+    -fx-border-width: 0;
+    -fx-border-color:  #292D33;
+
+    -fx-background-insets: 0;
+    -fx-background-color : #292D33;
+    -fx-font-size: 11;
+}
+
+.menu-item:hover{
+    -fx-background-color : #1a273b;
+}
+
+.menu-item .label{
+    -fx-text-fill: white;
+    -fx-font-size: 11;
+}

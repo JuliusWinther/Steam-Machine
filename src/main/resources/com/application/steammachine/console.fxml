@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="800.0" maxWidth="900.0" minHeight="800.0" minWidth="900.0" prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #292D33; -fx-border-color: #17181a;" xmlns="http:
+   <children>
+      <FontIcon fx:id="closeButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-x" iconSize="22" layoutX="266.0" layoutY="-1.0" onMouseClicked="#onCloseAction" onMouseEntered="#mouseOverCloseButton" onMouseExited="#mouseExitsCloseButton" x="610.0" y="26.0">
+         <effect>
+            <Glow />
+         </effect>
+      </FontIcon>
+      <Label fx:id="title" layoutX="14.0" layoutY="11.0" text="Console" textFill="#c5ccd7">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" disable="true" layoutX="14.0" layoutY="51.0" lineSpacing="1.0" prefHeight="735.0" prefWidth="872.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Line 1" textFill="WHITE" visible="false" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="consoleText" editable="false" layoutX="14.0" layoutY="51.0" prefHeight="735.0" prefWidth="872.0" style="-fx-background-color: black; -fx-text-fill: white;" stylesheets="@styles/consoleView.css" text="...">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </TextArea>
+   </children>
+</AnchorPane>

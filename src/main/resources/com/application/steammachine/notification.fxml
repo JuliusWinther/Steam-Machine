@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="180.0" maxWidth="438.0" minHeight="180.0" minWidth="438.0" prefHeight="180.0" prefWidth="438.0" style="-fx-background-color: #292D33; -fx-border-color: #17181a;" xmlns="http:
+   <children>
+      <FontIcon fx:id="closeButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-x" iconSize="22" layoutX="-197.0" layoutY="-1.0" onMouseClicked="#onCloseAction" onMouseEntered="#mouseOverCloseButton" onMouseExited="#mouseExitsCloseButton" x="610.0" y="26.0">
+         <effect>
+            <Glow />
+         </effect>
+      </FontIcon>
+      <Label fx:id="notificationTitle" layoutX="14.0" layoutY="11.0" text="Title" textFill="#c5ccd7">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="notificationText" layoutX="14.0" layoutY="51.0" prefHeight="104.0" prefWidth="408.0" text="Text" textFill="#8f9399" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

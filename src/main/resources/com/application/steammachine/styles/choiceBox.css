@@ -1,0 +1,58 @@
+.choice-box {
+    -fx-background-color: #292D33;
+    -fx-border-color: #8f9399;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.tooltip {
+    -fx-text-fill: #8f9399;
+}
+
+.choice-box .list-view .virtual-flow .cell,
+.choice-box .context-menu .menu-item {
+    -fx-background-color: #292D33;
+    -fx-text-fill: #8f9399;
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.choice-box .list-view .virtual-flow .cell .text,
+.choice-box .context-menu .menu-item .text {
+    -fx-fill: #8f9399;
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.choice-box .list-view .virtual-flow .cell:filled:selected,
+.choice-box .context-menu .menu-item:filled:selected {
+    -fx-background-color: #1E90FF;
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.choice-box .context-menu {
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.menu-item {
+    -fx-padding: 5!important;
+}
+
+.choice-box .label {
+    -fx-text-fill: #8f9399;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainWindow" maxHeight="94.0" maxWidth="313.0" minHeight="94.0" minWidth="313.0" prefHeight="94.0" prefWidth="313.0" style="-fx-background-color: #292D33; -fx-border-color: #17181a;" xmlns="http:
+   <children>
+      <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="10.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="7.0" prefHeight="52.0" prefWidth="212.0" text="Download Completed" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="installedTitle" layoutX="72.0" layoutY="33.0" prefHeight="52.0" prefWidth="231.0" text="Text" textFill="#8f9399" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

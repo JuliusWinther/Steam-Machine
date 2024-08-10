@@ -1,0 +1,34 @@
+
+
+.button {
+    -fx-background-color: #171a21;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+.slider {
+    -fx-control-inner-background: #383A3F;
+    -fx-padding: 10px;
+}
+
+.slider .thumb {
+    -fx-background-color: white;
+}
+
+.slider .track {
+    -fx-background-color: #383A3F;
+    -fx-border-color: white;
+}
+
+.slider .track-background {
+    -fx-background-color: #383A3F;
+    -fx-border-color: white;
+}
+
+.slider .tick-label {
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: white;
+}

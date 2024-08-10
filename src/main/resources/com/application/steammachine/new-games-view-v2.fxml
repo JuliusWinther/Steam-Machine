@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="1280.0" xmlns="http:
+   <children>
+      <BorderPane prefHeight="510.0" prefWidth="1280.0">
+         <center>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="1280.0" style="-fx-background-color: #292D33; -fx-border-color: #17181a;" stylesheets="@styles/customScrollBar.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="553.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuove Aggiunte" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Text>
+                  <ScrollPane fx:id="newGamesScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutY="74.0" minViewportHeight="300.0" minViewportWidth="1280.0" pannable="true" prefHeight="300.0" prefViewportHeight="300.0" prefViewportWidth="1280.0" prefWidth="1280.0" style="-fx-background-color: #292D33; -fx-background-insets: 0;" stylesheets="@styles/customScrollBar.css" vbarPolicy="NEVER">
+                     <content>
+                        <HBox fx:id="newGames" alignment="CENTER" prefHeight="299.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #292D33;">
+                           <padding>
+                              <Insets left="43.0" right="43.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </HBox>
+                     </content>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </ScrollPane>
+                  <Label fx:id="nothingLabel" alignment="CENTER" focusTraversable="false" layoutX="450.0" layoutY="215.0" mouseTransparent="true" pickOnBounds="false" text="Sembra qui per ora non ci sia nulla da vedere ..." textAlignment="CENTER" textFill="#6f6d6d" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <Pane fx:id="titlePanel" prefHeight="49.0" prefWidth="1280.0" style="-fx-background-color: #1E2228; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="titlePanel1" prefHeight="49.0" prefWidth="1280.0" stylesheets="@styles/buttonColorChange.css">
+                     <children>
+                        <Text fx:id="title1" fill="#eeeeef" layoutX="45.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STEAMACHINE NEWS" wrappingWidth="431.9736785888672">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Text>
+                        <FontIcon id="close-button" fx:id="closeButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-x" iconSize="46" layoutX="1229.0" layoutY="47.0" onMouseClicked="#onCloseAction" text="">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <ImageView fitHeight="39.0" fitWidth="30.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

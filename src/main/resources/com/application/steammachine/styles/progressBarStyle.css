@@ -1,0 +1,19 @@
+.progress-bar > .bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 0.75em;
+    -fx-background-color: #00BCD4;
+    -fx-control-inner-background: transparent;
+    -fx-box-border: transparent;
+    -fx-text-box-border: transparent;
+}
+
+.progress-bar {
+
+    -fx-background-color: transparent;
+    -fx-control-inner-background: black;
+    -fx-box-border: transparent;
+    -fx-text-box-border: transparent;
+    -fx-box-border: transparent;
+    -fx-shadow-highlight-color: transparent;
+
+}

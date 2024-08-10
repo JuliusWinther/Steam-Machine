@@ -1,0 +1,59 @@
+#settings-button:hover{
+    -fx-background-color: derive(#a19492, -20%)!important;
+}
+
+#bookmark-button:hover{
+    -fx-background-color: derive(#d4af37, -20%)!important;
+}
+
+#saves-button:hover{
+    -fx-background-color: derive(#2ea1b8, -20%)!important;
+}
+
+#uninstall-button:hover{
+    -fx-background-color: derive(#b83c2e, -20%)!important;
+}
+
+#find-button:hover{
+    -fx-background-color: derive(#2ea1b8, -20%)!important;
+}
+
+#install-button:hover{
+    -fx-background-color: derive(#3185E2, -20%)!important;
+}
+
+#play-button:hover{
+    -fx-background-color: derive(#30b82e, -20%)!important;
+}
+
+#proceed-button:hover{
+    -fx-background-color: derive(#43b82e, -20%)!important;
+}
+
+#deny-button:hover{
+    -fx-background-color: derive(#b83c2e, -20%)!important;
+}
+
+#open-queue:hover{
+    -fx-text-fill: #00BCD4;
+}
+
+#close-button:hover{
+    -fx-fill: #ea4b1f;
+}
+
+#window-size:hover{
+    -fx-fill: #59f71f;
+}
+
+#random-button:hover{
+    -fx-fill: rgba(222, 90, 161, 0.9);
+}
+
+#home-button:hover{
+    -fx-fill: rgb(227, 216, 14);
+}
+
+#other-buttons:hover{
+    -fx-fill: #696969;
+}

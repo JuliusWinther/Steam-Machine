@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="mainPanel" prefHeight="720.0" prefWidth="1280.0" stylesheets="@styles/general.css" xmlns="http:
+   <children>
+      <BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <Pane fx:id="previewPanel" prefHeight="603.0" prefWidth="1060.0" style="-fx-background-color: #383A3F; -fx-background-insets: 0;" BorderPane.alignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <ScrollPane fx:id="mainScrollPane" cacheHint="QUALITY" focusTraversable="false" hbarPolicy="NEVER" prefWidth="1060.0" style="-fx-background-insets: 0; -fx-background-color: #383A3F;">
+                     <content>
+                        <AnchorPane prefHeight="602.0" prefWidth="1059.0" style="-fx-background-insets: 0; -fx-background-color: #383A3F;">
+                           <children>
+                              <ImageView fx:id="headerImage" fitHeight="228.0" fitWidth="1059.0" pickOnBounds="true" style="-fx-background-color: #383A3F;">
+                                 <effect>
+                                    <InnerShadow choke="0.13" height="63.75" offsetY="-10.0" radius="15.4375" width="0.0">
+                                       <color>
+                                          <Color red="0.21960784494876862" green="0.22745098173618317" blue="0.24705882370471954" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </ImageView>
+                              <HBox layoutY="250.0" prefWidth="1059.0" spacing="35.0" style="-fx-background-color: #383A3F;">
+                                 <children>
+                                    <VBox spacing="40.0">
+                                       <children>
+                                          <AnchorPane fx:id="galleryPane" prefHeight="438.0" prefWidth="600.0" style="-fx-background-color: #383A3F;" stylesheets="@styles/mediaControls.css">
+                                             <children>
+                                                <ProgressIndicator layoutX="275.0" layoutY="140.0" style="-fx-progress-color: white;" />
+                                                <Pane fx:id="videoPane" onMouseEntered="#showControls" onMouseExited="#hideControls" prefHeight="338.0" prefWidth="602.0">
+                                                   <children>
+                                                      <MediaView fx:id="previewVideo" fitHeight="338.0" fitWidth="602.0" mouseTransparent="true" onMouseEntered="#showControls" onMouseExited="#hideControls">
+                                                         <viewport>
+                                                            <Rectangle2D />
+                                                         </viewport>
+                                                         <effect>
+                                                            <InnerShadow />
+                                                         </effect>
+                                                      </MediaView>
+                                                      <FontIcon fx:id="bigVideoPause" fill="WHITE" iconColor="WHITE" iconLiteral="bi-pause" iconSize="87" layoutX="257.0" layoutY="209.0" mouseTransparent="true" textAlignment="CENTER" visible="false">
+                                                         <font>
+                                                            <Font name="System Bold" size="87.0" />
+                                                         </font>
+                                                         <effect>
+                                                            <DropShadow height="158.76" radius="62.025" spread="0.91" width="91.34">
+                                                               <color>
+                                                                  <Color opacity="0.5" />
+                                                               </color>
+                                                            </DropShadow>
+                                                         </effect>
+                                                      </FontIcon>
+                                                      <ImageView fx:id="previewImage" fitHeight="338.0" fitWidth="602.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                         <effect>
+                                                            <InnerShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                                <ScrollPane fx:id="galleryScroller" fitToWidth="true" layoutY="339.0" pannable="true" prefHeight="80.0" prefWidth="602.0" style="-fx-background-color: #383A3F; -fx-background: #383A3F;" stylesheets="@styles/customScrollBar.css" vbarPolicy="NEVER" vmax="70.0" vmin="70.0" vvalue="70.0">
+                                                   <content>
+                                                      <HBox fx:id="gallery" prefHeight="70.0" prefWidth="601.0" spacing="5.0" style="-fx-background-color: #383A3F; -fx-background: #383A3F;">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </HBox>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <TextArea fx:id="gameDetails" editable="false" prefHeight="390.0" prefWidth="630.0" style="-fx-background-color: transparent;" stylesheets="@styles/descriptionStyle.css" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextArea>
+                                          <AnchorPane VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <ProgressIndicator layoutX="275.0" layoutY="45.0" style="-fx-progress-color: white;" visible="false" />
+                                                <WebView fx:id="detailedDescription" focusTraversable="false" maxWidth="-1.0" minHeight="200.0" minWidth="600.0" mouseTransparent="true" prefHeight="200.0" prefWidth="600.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" spacing="15.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="previewDesc" alignment="TOP_LEFT" cacheHint="QUALITY" mouseTransparent="true" pickOnBounds="false" prefHeight="117.0" prefWidth="340.0" text="Loading ..." textFill="#dde3ed" wrapText="true">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <stylesheets>
+                                                <URL value="@styles/descriptionStyle.css" />
+                                                <URL value="@styles/customScrollBar.css" />
+                                             </stylesheets>
+                                          </Label>
+                                          <TableView fx:id="infoTable" focusTraversable="false" maxHeight="206.0" maxWidth="340.0" minHeight="206.0" minWidth="340.0" prefHeight="206.0" prefWidth="340.0" style="-fx-background-color: #383A3F; -fx-border-color: #27282b;" stylesheets="@styles/infoTableStyle.css" VBox.vgrow="ALWAYS">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="Column X" />
+                                             </columns>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <WebView fx:id="minReqHtml" focusTraversable="false" mouseTransparent="true" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #383A3F;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                              </HBox>
+                              <AnchorPane layoutX="15.0" layoutY="159.0">
+                                 <children>
+                                    <MenuButton id="settings-button" fx:id="gameSettingsButton" alignment="CENTER" disable="true" layoutX="918.2000122070312" layoutY="5.399993896484375" mnemonicParsing="false" onMouseClicked="#mouseClickGameSettingsButton" popupSide="LEFT" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #a19492; -fx-font-weight: bold; -fx-font-size: 20; -fx-cursor: hand;" textAlignment="CENTER" textFill="WHITE" visible="false">
+                                       <items>
+                                          <MenuItem fx:id="menuAction1" mnemonicParsing="false" onAction="#onMenuAction1" text="Sfoglia file locali" />
+                                          <MenuItem fx:id="menuAction2" mnemonicParsing="false" onAction="#onMenuAction2" text="Crea collegamento" />
+                                          <MenuItem fx:id="menuAction3" mnemonicParsing="false" onAction="#onMenuAction3" text="Scarica Fix/Update" visible="false" />
+                                          <Menu fx:id="languageSelector" mnemonicParsing="false" style="-fx-border-width: 0; -fx-padding: 5; -fx-margin: 0; -fx-background-insets: 0; -fx-effect: null; -fx-border-color: #292D33;" text="Forza Lingua" visible="false">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#setToItalian" text="Italiano" />
+                                                <MenuItem mnemonicParsing="false" onAction="#setToEnglish" text="Inglese" />
+                                             </items>
+                                          </Menu>
+                                          <MenuItem fx:id="menuAction4" mnemonicParsing="false" onAction="#onMenuAction4" text="Apri Salvataggi" visible="false" />
+                                          <MenuItem fx:id="menuRestoreDataINI" mnemonicParsing="false" onAction="#onRestoreDataINI" text="Ripristina path" />
+                                          <MenuItem fx:id="menuAction5" mnemonicParsing="false" onAction="#onMenuAction5" text="Apri Workshop" visible="false" />
+                                       </items>
+                                       <graphic>
+                                          <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="bi-gear-fill" iconSize="26" textAlignment="CENTER" wrappingWidth="26.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <stylesheets>
+                                          <URL value="@styles/settingsMenuButton.css" />
+                                          <URL value="@styles/buttonColorChange.css" />
+                                       </stylesheets>
+                                    </MenuButton>
+                                    <Button id="uninstall-button" fx:id="uninstallPartsButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" defaultButton="true" disable="true" graphicTextGap="20.0" layoutX="860.2000122070312" layoutY="5.399993896484375" mnemonicParsing="false" onMouseClicked="#mouseClickUninstallPartsButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #b83c2e; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="bi-trash" iconSize="24" textAlignment="CENTER" wrappingWidth="26.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="uninstall-button" fx:id="uninstallButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" disable="true" graphicTextGap="20.0" layoutX="976.2000122070312" layoutY="5.399993896484375" mnemonicParsing="false" onMouseClicked="#mouseClickUninstallButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #b83c2e; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="bi-trash-fill" iconSize="24" textAlignment="CENTER" wrappingWidth="26.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="find-button" fx:id="findInstalledButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="20.0" layoutX="976.2000122070312" layoutY="5.399993896484375" mnemonicParsing="false" onMouseClicked="#mouseClickFindInstalledButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #2ea1b8; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="bi-binoculars-fill" iconSize="24" textAlignment="CENTER" wrappingWidth="26.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button id="bookmark-button" fx:id="bookmarkButton1" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="20.0" layoutX="918.2000122070312" layoutY="5.399993896484375" mnemonicParsing="false" onMouseClicked="#mouseClickBookmarkButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #d4af37; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fx:id="bookmarkIcon1" fill="WHITE" iconColor="WHITE" iconLiteral="bi-star" iconSize="28" textAlignment="CENTER" wrappingWidth="26.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button id="bookmark-button" fx:id="bookmarkButton2" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" disable="true" graphicTextGap="20.0" layoutX="860.2000122070312" layoutY="5.399993896484375" mnemonicParsing="false" onMouseClicked="#mouseClickBookmarkButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #d4af37; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fx:id="bookmarkIcon2" fill="WHITE" iconColor="WHITE" iconLiteral="bi-star" iconSize="28" textAlignment="CENTER" wrappingWidth="26.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                    </Button>
+                                    <AnchorPane fx:id="saveButtons" disable="true" layoutX="755.0" layoutY="5.399993896484375" prefHeight="54.0" prefWidth="54.0" visible="false">
+                                       <children>
+                                          <Line endX="2.199951171875" endY="35.75" layoutX="45.0" layoutY="11.0" startX="2.199951171875" startY="-3.0" stroke="#2ea1b8" strokeWidth="5.0" />
+                                          <Button id="saves-button" fx:id="uploadSaveButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="20.0" layoutX="42.20001220703125" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#mouseClickUploadSaveButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #2ea1b8; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Black" size="41.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontIcon fx:id="bookmarkIcon21" fill="WHITE" iconColor="WHITE" iconLiteral="bi-cloud-arrow-up-fill" iconSize="30" textAlignment="CENTER" wrappingWidth="26.0">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                </FontIcon>
+                                             </graphic>
+                                          </Button>
+                                          <Button id="saves-button" fx:id="downloadSaveButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#mouseClickDownloadSaveButton" prefHeight="54.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" style="-fx-background-color: #2ea1b8; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Black" size="41.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontIcon fx:id="bookmarkIcon211" fill="WHITE" iconColor="WHITE" iconLiteral="bi-cloud-arrow-down-fill" iconSize="30" textAlignment="CENTER" wrappingWidth="26.0">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                </FontIcon>
+                                             </graphic>
+                                          </Button>
+                                          <Line endX="2.0" endY="17.0" layoutX="46.0" layoutY="26.0" startX="2.0" startY="-14.0" stroke="WHITE" strokeWidth="2.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button id="install-button" fx:id="installButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="RIGHT" defaultButton="true" graphicTextGap="20.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#mouseClickInstallButton" prefHeight="48.0" prefWidth="177.0" style="-fx-background-color: #3185E2; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" text="INSTALLA" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="bi-download" iconSize="26" wrappingWidth="16.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button id="play-button" fx:id="playButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="RIGHT" defaultButton="true" disable="true" graphicTextGap="20.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#mouseClickPlayButton" prefHeight="48.0" prefWidth="177.0" style="-fx-background-color: #30b82e; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" text="GIOCA" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="41.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="bi-play-fill" iconSize="26" wrappingWidth="16.0">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </FontIcon>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Text fx:id="gameTitleLabel" fill="#eeeeef" layoutX="187.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME TITLE" wrappingWidth="524.9736785888672">
+                                       <font>
+                                          <Font name="System Bold" size="21.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Text>
+                                    <Text fx:id="gameVersionLabel" fill="WHITE" layoutX="189.0" layoutY="48.0" opacity="0.65" strokeType="OUTSIDE" strokeWidth="0.0" text="version" visible="false" wrappingWidth="130.015625">
+                                       <font>
+                                          <Font name="System Italic" size="10.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="40.0" />
+                           </padding>
+                        </AnchorPane>
+                     </content>
+                     <stylesheets>
+                        <URL value="@styles/descriptionStyle.css" />
+                        <URL value="@styles/customScrollBar.css" />
+                     </stylesheets>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane fx:id="listPanel" prefHeight="603.0" prefWidth="220.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="607.0" prefWidth="227.0" style="-fx-background-color: #252930;">
+                     <children>
+                        <HBox alignment="CENTER" spacing="14.0" style="-fx-background-color: #282C33;">
+                           <children>
+                              <TextField fx:id="searchBar" prefHeight="25.0" prefWidth="146.0" promptText="Search" stylesheets="@styles/searchBarStyle.css" />
+                              <FontIcon fx:id="rapidFilter" fill="WHITE" iconColor="WHITE" iconLiteral="bi-collection" iconSize="17" onMouseClicked="#onRapidFilter" textOrigin="CENTER">
+                                 <effect>
+                                    <Glow level="0.1" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontIcon>
+                              <AnchorPane>
+                                 <children>
+                                    <MenuButton alignment="CENTER" contentDisplay="CENTER" maxHeight="23.0" maxWidth="16.0" minHeight="23.0" minWidth="16.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="23.0" prefWidth="16.0" style="-fx-background-color: #282C33; -fx-cursor: hand;" stylesheets="@styles/filterButton.css" textAlignment="CENTER" textFill="WHITE">
+                                      <items>
+                                        <MenuItem disable="true" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Filtra:" />
+                                        <MenuItem fx:id="filterInstalled" mnemonicParsing="false" onAction="#onFilterInstalled" text="Installati" />
+                                          <MenuItem fx:id="filterBookmarked" mnemonicParsing="false" onAction="#onFilterBookmarked" text="Preferiti" />
+                                          <MenuItem fx:id="filterPartial" mnemonicParsing="false" onAction="#onFilterPartial" text="Parziali" />
+                                          <MenuItem fx:id="filterNone" mnemonicParsing="false" onAction="#onFilterNone" text="Tutti" />
+                                          <Menu fx:id="nintendoFilter1" mnemonicParsing="false" style="-fx-border-width: 0; -fx-padding: 5; -fx-margin: 0; -fx-background-insets: 0; -fx-effect: null; -fx-border-color: #292D33;" text="Piattaforma">
+                                             <items>
+                                                <MenuItem fx:id="filterSteam" mnemonicParsing="false" onAction="#onFilterSteam" text="Steam" />
+                                                <MenuItem fx:id="filterEpic" mnemonicParsing="false" onAction="#onFilterEpic" text="EpicGames" />
+                                                <Menu fx:id="nintendoFilter" mnemonicParsing="false" style="-fx-border-width: 0; -fx-padding: 5; -fx-margin: 0; -fx-background-insets: 0; -fx-effect: null; -fx-border-color: #292D33;" text="Nintendo">
+                                                   <items>
+                                                      <MenuItem fx:id="filterN64" mnemonicParsing="false" onAction="#onFilterN64" text="N64" />
+                                                      <MenuItem fx:id="filterGba" mnemonicParsing="false" onAction="#onFilterGba" text="GBA" />
+                                                      <MenuItem fx:id="filterNds" mnemonicParsing="false" onAction="#onFilterNds" text="NDS" />
+                                                      <MenuItem fx:id="filter3ds" mnemonicParsing="false" onAction="#onFilter3ds" text="3DS" />
+                                                      <MenuItem fx:id="filterWii" mnemonicParsing="false" onAction="#onFilterWii" text="Wii" />
+                                                      <MenuItem fx:id="filterSwitch" mnemonicParsing="false" onAction="#onFilterSwitch" text="Switch" />
+                                                   </items>
+                                                </Menu>
+                                                <Menu fx:id="playstationFilter" mnemonicParsing="false" style="-fx-border-width: 0; -fx-padding: 5; -fx-margin: 0; -fx-background-insets: 0; -fx-effect: null; -fx-border-color: #292D33;" text="PlayStation">
+                                                   <items>
+                                                      <MenuItem fx:id="filterPs1" mnemonicParsing="false" onAction="#onFilterPs1" text="PS1" />
+                                                      <MenuItem fx:id="filterPs2" mnemonicParsing="false" onAction="#onFilterPs2" text="PS2" />
+                                                   </items>
+                                                </Menu>
+                                             </items>
+                                          </Menu>
+                                          <Menu fx:id="nintendoFilter11" mnemonicParsing="false" style="-fx-border-width: 0; -fx-padding: 5; -fx-margin: 0; -fx-background-insets: 0; -fx-effect: null; -fx-border-color: #292D33;" text="Giocatori">
+                                             <items>
+                                                <MenuItem fx:id="filterSingleplayer" mnemonicParsing="false" onAction="#onFilterSingleplayer" text="Singleplayer" />
+                                                <MenuItem fx:id="filterOnline" mnemonicParsing="false" onAction="#onFilterOnline" text="Online" />
+                                                <MenuItem fx:id="filterLan" mnemonicParsing="false" onAction="#onFilterLan" text="Lan (ZeroTier)" />
+                                                <MenuItem fx:id="filterLocal" mnemonicParsing="false" onAction="#onFilterLocal" text="Locale o Parsec" />
+                                             </items>
+                                          </Menu>
+                                          <MenuItem fx:id="filterSoftware" mnemonicParsing="false" onAction="#onFilterSoftware" text="Programmi" />
+                                          <MenuItem fx:id="filterOther" mnemonicParsing="false" onAction="#onFilterOther" text="Altro" />
+                                      </items>
+                                       <graphic>
+                                          <FontIcon fx:id="filterButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-funnel-fill" iconSize="16" mouseTransparent="true" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="15.5" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </MenuButton>
+                                    <FontIcon fx:id="filterButtonDecoration" fill="WHITE" iconColor="WHITE" iconLiteral="bi-play-fill" iconSize="7" layoutX="11.0" layoutY="21.0" mouseTransparent="true" onMouseClicked="#onFullScreenClick" text="" wrappingWidth="6.5">
+                                       <effect>
+                                          <Glow level="0.1" />
+                                       </effect>
+                                    </FontIcon>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="14.0" left="3.0" right="3.0" top="14.0" />
+                           </padding>
+                        </HBox>
+                        <ListView fx:id="gameList" blendMode="SRC_ATOP" prefHeight="549.0" prefWidth="227.0" style="-fx-background-color: #282C33;" stylesheets="@styles/gameListCellStyle.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <top>
+            <Pane fx:id="titlePanel" prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: #1E2228; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="titlePanel1" prefHeight="49.0" prefWidth="1280.0" stylesheets="@styles/buttonColorChange.css">
+                     <children>
+                        <Text fx:id="title1" fill="#eeeeef" layoutX="45.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STEAMACHINE" wrappingWidth="200.9736785888672">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Text>
+                        <FontIcon fx:id="homeButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-house-fill" iconSize="30" layoutX="1141.0" layoutY="38.0" onMouseClicked="#mouseClickHomeButton" visible="false">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                        </FontIcon>
+                        <FontIcon id="close-button" fx:id="closeButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-x" iconSize="46" layoutX="1229.0" layoutY="47.0" onMouseClicked="#onCloseAction" text="">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <ImageView fitHeight="39.0" fitWidth="30.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo.png" />
+                           </image>
+                        </ImageView>
+                        <FontIcon id="other-buttons" fx:id="settingsButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-tools" iconSize="20" layoutX="1117.0" layoutY="34.0" onMouseClicked="#onSettingsOpenAction">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <Text fx:id="version" fill="#b9b9b9" layoutX="234.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="version">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <FontIcon id="window-size" fx:id="collapseButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-dash-circle" iconSize="23" layoutX="1163.0" layoutY="36.0" onMouseClicked="#onCollapseClick">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon fx:id="fullScreenButton" disable="true" fill="WHITE" iconColor="WHITE" iconLiteral="bi-fullscreen" iconSize="24" layoutX="1146.0" layoutY="36.0" onMouseClicked="#onFullScreenClick" visible="false">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon id="window-size" fx:id="basicWindowButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-fullscreen-exit" iconSize="23" layoutX="1201.0" layoutY="36.0" onMouseClicked="#onBasicWindowClick">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon id="other-buttons" fx:id="consoleButton" disable="true" fill="WHITE" iconColor="WHITE" iconLiteral="bi-terminal" iconSize="23" layoutX="1080.0" layoutY="36.0" mouseTransparent="true" onMouseClicked="#onConsoleOpenAction" strokeDashOffset="-2.0" text="" visible="false" wrappingWidth="20.0">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon id="random-button" fx:id="randomButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-shuffle" iconSize="23" layoutX="1045.0" layoutY="36.0" onMouseClicked="#onRandomAction" strokeDashOffset="-2.0" wrappingWidth="20.0">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon id="home-button" fill="WHITE" iconColor="WHITE" iconLiteral="bi-newspaper" iconSize="23" layoutX="1080.0" layoutY="36.0" onMouseClicked="#onNewsOpenAction" strokeDashOffset="-2.0" wrappingWidth="20.0">
+                           <effect>
+                              <Glow level="0.1" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <AnchorPane layoutX="-9.0" layoutY="643.0">
+         <children>
+            <Pane layoutX="9.0" layoutY="9.0" prefHeight="68.0" prefWidth="1280.0" style="-fx-background-color: #171A21; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+               <children>
+                  <ProgressBar fx:id="progressBar" layoutX="463.0" layoutY="35.0" prefHeight="8.0" prefWidth="351.0" progress="0.0" stylesheets="@styles/progressBarStyle.css" />
+                  <Label id="open-queue" fx:id="DownloadLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="462.0" layoutY="5.0" onMouseClicked="#openQueue" onMouseEntered="#queueButtonMouseEntered" onMouseExited="#queueButtonMouseExited" prefHeight="27.0" prefWidth="351.0" style="-fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" text="DOWNLOADS" textAlignment="CENTER" textFill="#919191">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="downloadSpeed" layoutX="466.0" layoutY="47.0" prefHeight="15.0" prefWidth="177.0" textAlignment="CENTER" textFill="#919191">
+                     <font>
+                        <Font name="Arial Nova Light Italic" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dimensionLabel" alignment="CENTER_RIGHT" layoutX="646.0" layoutY="47.0" prefHeight="15.0" prefWidth="168.0" textAlignment="CENTER" textFill="#919191">
+                     <font>
+                        <Font name="Arial Nova Light Italic" size="10.0" />
+                     </font>
+                  </Label>
+                  <FontIcon fx:id="pauseButton" disable="true" fill="WHITE" iconColor="WHITE" iconLiteral="bi-pause" iconSize="20" layoutX="628.0" layoutY="64.0" onMouseClicked="#onPauseClick" onMouseEntered="#mouseOverPauseButton" onMouseExited="#mouseExitsPauseButton" text="" visible="false">
+                     <effect>
+                        <Glow level="0.1" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+                  <Label fx:id="cacheLabel" layoutX="14.0" layoutY="40.0" prefHeight="15.0" prefWidth="177.0" textFill="#919191" visible="false">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

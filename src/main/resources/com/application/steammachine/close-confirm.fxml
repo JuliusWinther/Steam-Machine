@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="180.0" maxWidth="438.0" minHeight="180.0" minWidth="438.0" prefHeight="180.0" prefWidth="438.0" style="-fx-background-color: #292D33; -fx-border-color: #17181a;" xmlns="http:
+   <children>
+      <FontIcon fx:id="closeButton" fill="WHITE" iconColor="WHITE" iconLiteral="bi-x" iconSize="22" layoutX="-197.0" layoutY="-1.0" onMouseClicked="#onCloseAction" onMouseEntered="#mouseOverCloseButton" onMouseExited="#mouseExitsCloseButton" x="610.0" y="26.0">
+         <effect>
+            <Glow />
+         </effect>
+      </FontIcon>
+      <Label fx:id="uninstallLabel" layoutX="14.0" layoutY="11.0" text="Sei sicuro di voler chiudere SteamMachine?" textFill="#8f9399">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button id="proceed-button" fx:id="proceedButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="RIGHT" defaultButton="true" graphicTextGap="20.0" layoutX="55.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#mouseClickProceedButton" prefHeight="44.0" prefWidth="129.0" style="-fx-background-color: #43b82e; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" text="PROCEDI" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="41.0" />
+         </font>
+      </Button>
+      <Button id="deny-button" fx:id="denyButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="RIGHT" defaultButton="true" graphicTextGap="20.0" layoutX="252.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#mouseClickDenyButton" prefHeight="44.0" prefWidth="129.0" style="-fx-background-color: #b83c2e; -fx-font-size: 20; -fx-font-weight: bold; -fx-cursor: hand;" stylesheets="@styles/buttonColorChange.css" text="ANNULLA" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="41.0" />
+         </font>
+      </Button>
+      <Label fx:id="uninstallLabel1" layoutX="14.0" layoutY="37.0" prefHeight="20.0" prefWidth="410.0" text="Il software tenterà di preservare tutti i dati fino ad ora scaricati" textFill="#8f9399">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

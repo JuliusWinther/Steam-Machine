@@ -1,0 +1,14 @@
+.color-picker {
+
+    -fx-background-color:  #1b1d21;
+    -fx-border-color: #7C8593;
+    -fx-border-radius: 5;
+    -fx-background-insets: 1;
+
+}
+
+.color-picker .label {
+
+    -fx-text-fill: #8f9399;
+
+}

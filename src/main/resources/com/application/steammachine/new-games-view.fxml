@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="643.0" prefWidth="418.0" xmlns="http:
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="418.0" style="-fx-background-color: #292D33; -fx-border-color: #17181a;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bentornato!" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect></Text>
+            <ListView fx:id="newGameListView" layoutX="10.0" layoutY="69.0" prefHeight="562.0" prefWidth="398.0" stylesheets="@styles/queueListCellStyle.css" />
+            <FontIcon fx:id="closeButton" fill="WHITE" iconColor="#404040" iconLiteral="bi-x" iconSize="22" layoutX="-215.0" layoutY="-3.0" onMouseClicked="#onCloseAction" onMouseEntered="#mouseOverCloseButton" onMouseExited="#mouseExitsCloseButton" text="" x="610.0" y="26.0">
+               <effect>
+                  <Glow />
+               </effect>
+            </FontIcon>
+            <Text fill="WHITE" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mentri eri assente i Treni hanno portato diversi nuovi passeggeri!" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
