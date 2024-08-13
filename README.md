@@ -21,6 +21,8 @@ Steam-Machine is a software application developed in Java 22 and JavaFX, designe
   - .rar File Support: Currently supports only .rar files with a maximum size of 5 GB. Larger files must be partitioned into 5 GB archives.
   - Partition Management: Fully extracted partitions are deleted to optimize disk space.
 
+And a lot more, the project status is: complete, all that could be seen and doesn't need to be is completed and functional.
+
 ## Requirements
 
 * Java 22: Ensure you have Java 22 installed on your system.
