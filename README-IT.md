@@ -25,11 +25,11 @@ Steam-Machine è un'applicazione software sviluppata in Java 22 e JavaFX, proget
 * Windows: Il software è progettato per funzionare su sistemi Windows.
 * Google Sheets Access: Il software necessita di accesso alla pagina Google Sheets configurata per il database.
 
-Limitazioni
+## Limitazioni
 
 Modifica e Distribuzione: Il software è destinato esclusivamente a scopo di dimostrazione. Non deve essere modificato, distribuito o utilizzato al di fuori dell'ambito educativo. Per garantire la sicurezza, la classe launcher è stata rimossa.
 
-Contributi
+## Contributi
 
 Poiché il software è destinato esclusivamente a scopo di esercizio e non deve essere modificato, al momento non accettiamo contributi esterni.
 
