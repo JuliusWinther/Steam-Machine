@@ -28,6 +28,7 @@ Steam-Machine is a software application developed in Java 22 and JavaFX, designe
 ## Limitations
 
 Modification and Distribution: The software is intended for demonstration purposes only. It should not be modified, distributed, or used beyond educational purposes. For security reasons, the launcher class has been removed.
+For further details, please refer to the LICENSE file.
 
 ## Contributions
 
