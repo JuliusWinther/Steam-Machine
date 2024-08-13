@@ -7,7 +7,7 @@ Steam-Machine is a software application developed in Java 22 and JavaFX, designe
 * Complete Software Management: Allows you to view details about software, download them, and uninstall them conveniently.
 * Compatibility: Supports any Windows executable and can launch ROMs on RetroArch.
 * Integration with Steam: Retrieves software details directly from Steam, including descriptions, images, videos, and banners.
-* External Database: Uses a Google Sheets page as a database for details on custom software not available on Steam and for download links.
+* Free External Database: Uses a Google Sheets page as a database for details on custom software not available on Steam and for download links.
 * Direct Link Support: Works only with direct links that support header information, but a webcrawler search system can be added.
 * Automatic Update System: Includes an automatic update system, via an external Java application not included in this repository.
 * Download Management:
