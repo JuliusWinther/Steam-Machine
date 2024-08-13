@@ -2,6 +2,8 @@
 
 Steam-Machine è un'applicazione software sviluppata in Java 22 e JavaFX, progettata per Windows. Questo software emula le principali funzionalità di Steam, consentendo di consultare informazioni su determinati software, scaricarli, disinstallarli e molto altro, con un'interfaccia user-friendly e varie funzionalità aggiuntive. È compatibile con qualsiasi eseguibile di Windows e può avviare direttamente ROM su RetroArch.
 
+Non essendo stato creato per la distribuzione, il codice di questo software è altamente confusionario e poco ottimizzato.
+
 [UI.webm](https://github.com/user-attachments/assets/fb31f373-8214-4fda-8b5b-ed7cab62d1fa)
 
 ## Caratteristiche principali
