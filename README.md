@@ -1,36 +1,36 @@
 # Steam-Machine
 
-Steam-Machine è un'applicazione software sviluppata in Java 22 e JavaFX, progettata per Windows. Questo software emula le principali funzionalità di Steam, consentendo di consultare informazioni su determinati software, scaricarli, disinstallarli e molto altro, con un'interfaccia user-friendly e varie funzionalità aggiuntive. È compatibile con qualsiasi eseguibile di Windows e può avviare direttamente ROM su RetroArch.
+Steam-Machine is a software application developed in Java 22 and JavaFX, designed for Windows. This software emulates the main functionalities of Steam, allowing you to view information about specific software, download them, uninstall them, and much more, with a user-friendly interface and various additional features. It is compatible with any Windows executable and can directly launch ROMs on RetroArch.
 
-## Caratteristiche principali
+## Main Features
 
-* Gestione Completa dei Software: Consente di consultare dettagli sui software, scaricarli e disinstallarli comodamente.
-* Compatibilità: Supporta qualsiasi eseguibile di Windows e può avviare ROM su RetroArch.
-* Integrazione con Steam: Recupera dettagli dei software direttamente da Steam, inclusi descrizione, immagini, video e banner.
-* Database Esterno: Utilizza una pagina Google Sheets come database per dettagli su software personalizzati non presenti su Steam e per i link di download.
-* Supporto Link Diretti: Funziona solo con link diretti che supportano le informazioni header, ma è possibile aggiungere un sistema di ricerca tramite webcrawler.
-* Sistema di Aggiornamento Automatico: Include un sistema di aggiornamento automatico, tramite un'applicazione Java esterna non inclusa in questa repository.
-* Gestione Download:
-- Pausa e Ripresa: Possibilità di mettere in pausa e riprendere i download.
-- Coda Ordinabile: Organizzazione dei download in una coda ordinabile.
-- Recupero Download: Recupero dei download dal punto in cui erano stati interrotti, anche dopo il riavvio del software.
-- Sicurezza: Diversi sistemi per garantire il completamento del download e gestione dei file parziali.
-* Gestione File:
-- Supporto File .rar: Attualmente supporta solo file .rar con dimensione massima di 5 GB. File più grandi devono essere partizionati in archivi da 5 GB.
-- Gestione Partizioni: Le partizioni completamente estratte vengono cancellate per ottimizzare lo spazio su disco.
+* Complete Software Management: Allows you to view details about software, download them, and uninstall them conveniently.
+* Compatibility: Supports any Windows executable and can launch ROMs on RetroArch.
+* Integration with Steam: Retrieves software details directly from Steam, including descriptions, images, videos, and banners.
+* External Database: Uses a Google Sheets page as a database for details on custom software not available on Steam and for download links.
+* Direct Link Support: Works only with direct links that support header information, but a webcrawler search system can be added.
+* Automatic Update System: Includes an automatic update system, via an external Java application not included in this repository.
+* Download Management:
+  - Pause and Resume: Ability to pause and resume downloads.
+  - Sortable Queue: Organizes downloads in a sortable queue.
+  - Download Recovery: Recovers downloads from where they were interrupted, even after restarting the software.
+  - Security: Various systems to ensure download completion and management of partial files.
+* File Management:
+  - .rar File Support: Currently supports only .rar files with a maximum size of 5 GB. Larger files must be partitioned into 5 GB archives.
+  - Partition Management: Fully extracted partitions are deleted to optimize disk space.
 
-## Requisiti
+## Requirements
 
-* Java 22: Assicurati di avere Java 22 installato sul tuo sistema.
-* Windows: Il software è progettato per funzionare su sistemi Windows.
-* Google Sheets Access: Il software necessita di accesso alla pagina Google Sheets configurata per il database.
+* Java 22: Ensure you have Java 22 installed on your system.
+* Windows: The software is designed to run on Windows systems.
+* Google Sheets Access: The software requires access to the configured Google Sheets page for the database.
 
-Limitazioni
+Limitations
 
-Modifica e Distribuzione: Il software è destinato esclusivamente a scopo di dimostrazione. Non deve essere modificato, distribuito o utilizzato al di fuori dell'ambito educativo. Per garantire la sicurezza, la classe launcher è stata rimossa.
+Modification and Distribution: The software is intended for demonstration purposes only. It should not be modified, distributed, or used beyond educational purposes. For security reasons, the launcher class has been removed.
 
-Contributi
+Contributions
 
-Poiché il software è destinato esclusivamente a scopo di esercizio e non deve essere modificato, al momento non accettiamo contributi esterni.
+As the software is intended solely for exercise purposes and should not be modified, external contributions are not currently accepted.
 
-Per ulteriori informazioni, supporto o domande, puoi contattarci a @mm_winther su Discord.
+For more information, support, or questions, you can contact us at @mm_winther on Discord.
