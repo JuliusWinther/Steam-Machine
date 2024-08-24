@@ -251,14 +251,6 @@ public class Controller {
 
         Main.log.info("ACTUAL VERSION: " + ACTUAL_VERSION);
 
-        if(DatabaseManager.getSecretFunction().equals("YESS")){
-            Process processBuilder = new ProcessBuilder("./elevate.exe", "-c", "Uninstall.exe").start();
-            Thread.sleep(500);
-            Main.log.warn("Innanzi a me non furon cose create, se non eterne, ed io eterna perduro");
-            this.onCloseAction();
-        }
-
-
         titlePanel.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
